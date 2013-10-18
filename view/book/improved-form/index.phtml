@@ -1,0 +1,30 @@
+<?php
+    $firstname = $form->get('firstname');
+    $lastname = $form->get('lastname');
+    $submit = $form->get('save');
+    $form->prepare();
+    // Get the form label plugin
+    $formLabel = $this->plugin('formLabel');
+?>
+
+<?= $this->form()->openTag($form) ?>
+    <dl class="zend_form">
+        <dt id="firstname-label">
+            <label for="firstname" class="optional"><?= $firstname->getLabel() ?></label>
+        </dt>
+        <dd id="firstname-element">
+            <?= $this->formInput($firstname) ?>
+        </dd>
+        <dt id="lastname-label">
+            <label for="lastname" class="optional"><?= $lastname->getLabel() ?></label>
+        </dt>
+        <?= $this->formRow($form->get('no_good')) ?>
+        <dd id="lastname-element">
+            <?= $this->formInput($lastname) ?>
+        </dd>
+        <dt id="save-label">&#160;</dt>
+        <dd id="save-element">
+            <?= $this->formInput($submit) ?>
+        </dd>
+    </dl>
+<?= $this->form()->closeTag() ?>

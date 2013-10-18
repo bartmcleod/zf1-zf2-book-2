@@ -1,0 +1,20 @@
+<h1>The filtered and validated result:</h1>
+<p>The quotes are there so that you can see that whitespace is stripped off the first name</p>
+
+<p>First name: &quot;<?php echo $firstname ?>&quot;</p>
+<p>Last name: &quot;<?php echo $this->escapeHtml($lastname) ?>&quot;</p>
+
+<h2>
+    <?php if ($valid === true) : ?>
+        The data is valid.
+    <?php else: ?>
+        INVALID data detected!
+    <?php endif ?>
+</h2>
+<?php if (isset($messages)) : ?>
+    <?php foreach ($messages as $message) : ?>
+        <p>
+            <?php var_dump($message) ?>
+        </p>
+    <?php endforeach ?>
+<?php endif ?>

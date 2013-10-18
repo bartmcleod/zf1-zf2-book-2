@@ -1,0 +1,14 @@
+<?php $this->headTitle('PreDispatch example 2') ?>
+<h2>This comes from the session:</h2>
+<?php echo $hello ?>
+
+<h2>And this from our view helper Hello:</h2>
+<?php echo $this->hello() ?>
+
+<h2>And this from our view helper HelloSimple:</h2>
+<?php echo $this->helloSimple() ?>
+
+<?php
+    $this->logger('The logger view helper is sending a message!');
+?>
+
