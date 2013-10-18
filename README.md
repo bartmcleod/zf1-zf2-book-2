@@ -4,7 +4,7 @@ zf1-zf2-book-2
 The Book module of the ZF 2 application that holds the conversion results of the ZF 1 -> ZF 2 migration described in the book and some additional examples.
 
 Installation
-========
+------------
 1. Download or clone the ZendSkeletonApplication
 2. Clone this project into the module directory, clone as 'Book'
 3. Enable the 'Book' module in config/application.config.php
@@ -13,22 +13,22 @@ Installation
 6. Download the FirePHPCore library and put it in the 'vendor' directory
  
 Database setup
-==============
+--------------
 Create a database called 'book'.
 
 Create a table person:
 
-CREATE TABLE `person` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(100) NOT NULL,
-  `lastname` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8
+    CREATE TABLE `person` (
+      `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+      `firstname` varchar(100) NOT NULL,
+      `lastname` varchar(100) NOT NULL,
+      PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8
 
 Later, you might install ZfcUser and add a 'user' table following their instructions.
 
 Configuration
-=============
+-------------
 Put below contents in config/autoload/local.php
 
     <?php
