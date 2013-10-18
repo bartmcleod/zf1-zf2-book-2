@@ -30,6 +30,7 @@ Later, you might install ZfcUser and add a 'user' table following their instruct
 Configuration
 =============
 Put below contents in config/autoload/local.php
+
     <?php
     /**
      * Local Configuration Override
